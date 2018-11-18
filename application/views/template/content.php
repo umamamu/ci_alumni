@@ -1,3 +1,5 @@
-<main id="content">
-  <?php echo $pageContent ?>
+<main>
+	<div class="container">
+		<?php echo $pageContent; ?>
+	</div>
 </main>
