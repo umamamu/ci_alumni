@@ -9,6 +9,15 @@ class Welcome extends CI_Controller {
 		$data['pesanPertama'] = 'Hello from your EX';
 		$data['pesanKedua'] = 'Hello';
 		$data['pesanKetiga'] = 'Data ini dari controller welcome';
+		
+		// Memanggil model alumni
+		$this->load->model('m_alumni');
+
+		// Mengambil data dari model
+		$data['alumni'] = $this->m_alumni->getAlumni();
+
 		$this->load->view('welcome_message', $data);
+
+
 	}
 }
